@@ -58,6 +58,7 @@
 		C2CD23121FE2783D006D29A3 /* KNSlippageMenu */ = {
 			isa = PBXGroup;
 			children = (
+				C2CD23291FE278D3006D29A3 /* KNSilppageController */,
 				C2CD23131FE2783D006D29A3 /* AppDelegate.h */,
 				C2CD23141FE2783D006D29A3 /* AppDelegate.m */,
 				C2CD23161FE2783E006D29A3 /* ViewController.h */,
@@ -69,6 +70,13 @@
 				C2CD23221FE2783E006D29A3 /* main.m */,
 			);
 			path = KNSlippageMenu;
+			sourceTree = "<group>";
+		};
+		C2CD23291FE278D3006D29A3 /* KNSilppageController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KNSilppageController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
