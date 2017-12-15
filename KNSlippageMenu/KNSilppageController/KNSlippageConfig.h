@@ -31,10 +31,10 @@ typedef NS_ENUM(NSInteger, KNSlippageDirection){
 @property(nonatomic, assign)float scaleY;
 
 ///菜单滑出的方向
-@property(nonatomic, assign)KNSlippageDirection *direction;
+@property(nonatomic, assign)KNSlippageDirection direction;
 
 //动画切换过程中， 最底层的背景图片
-@property(nonatomic, strong)UIImage *bakeImage;
+@property(nonatomic, strong)UIImage *backImage;
 
 
 /**
