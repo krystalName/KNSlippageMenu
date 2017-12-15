@@ -11,3 +11,16 @@
 @implementation KNTransitionMethod
 
 @end
+
+
+@implementation MaskView
+
+@end
+
+NSString *const KNLateralSlideMaskViewKey = @"CWLateralSlideMaskViewKey";
+NSString *const KNLateralSlideAnimatorKey = @"CWLateralSlideAnimatorKey";
+NSString *const KNLateralSlideInterativeKey = @"CWLateralSlideInterativeKey";
+
+NSString *const KNLateralSlidePanNotication = @"CWLateralSlidePanNotication";
+NSString *const KNLateralSlideTapNotication = @"CWLateralSlideTapNotication";
+

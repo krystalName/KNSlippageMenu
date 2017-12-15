@@ -66,3 +66,11 @@ typedef NS_ENUM(NSInteger , KNTransitionAnimation){
 
 @end
 
+
+//所有通知的固定名字
+UIKIT_EXTERN NSString *const KNLateralSlideAnimatorKey;
+UIKIT_EXTERN NSString *const KNLateralSlideMaskViewKey;
+UIKIT_EXTERN NSString *const KNLateralSlideInterativeKey;
+
+UIKIT_EXTERN NSString *const KNLateralSlidePanNotication;
+UIKIT_EXTERN NSString *const KNLateralSlideTapNotication;
