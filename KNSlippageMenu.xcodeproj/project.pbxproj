@@ -15,6 +15,7 @@
 		C2CD23231FE2783E006D29A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD23221FE2783E006D29A3 /* main.m */; };
 		C2CD232C1FE37D4D006D29A3 /* KNSlippageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */; };
 		C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */; };
+		C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNSlippageConfig.m; sourceTree = "<group>"; };
 		C2CD232D1FE3B608006D29A3 /* KNTransitionMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNTransitionMethod.h; sourceTree = "<group>"; };
 		C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNTransitionMethod.m; sourceTree = "<group>"; };
+		C2F31E711FE7B7250065E4C6 /* KNInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNInteractiveTransition.h; sourceTree = "<group>"; };
+		C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */,
 				C2CD232D1FE3B608006D29A3 /* KNTransitionMethod.h */,
 				C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */,
+				C2F31E711FE7B7250065E4C6 /* KNInteractiveTransition.h */,
+				C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */,
 			);
 			path = KNSilppageController;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			files = (
 				C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */,
 				C2CD23181FE2783E006D29A3 /* ViewController.m in Sources */,
+				C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */,
 				C2CD232C1FE37D4D006D29A3 /* KNSlippageConfig.m in Sources */,
 				C2CD23231FE2783E006D29A3 /* main.m in Sources */,
 				C2CD23151FE2783D006D29A3 /* AppDelegate.m in Sources */,
