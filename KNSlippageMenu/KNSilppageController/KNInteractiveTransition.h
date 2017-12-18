@@ -11,7 +11,13 @@
 
 @interface KNInteractiveTransition : UIPercentDrivenInteractiveTransition
 
-//是否可以互动
+///是否可以互动
 @property(nonatomic, assign) BOOL interacting;
+///滑动配置
+@property(nonatomic, weak)KNSlippageConfig *SlippageConfig;
 
+-(instancetype)initWithTransitionMethodType:(KNTransitionMethodType )MethodType;
++(instancetype)interactiveWithTransitionMethodType:(KNTransitionMethodType)MethodType;
+
+- (void)addPanGestureForViewController:(UIViewController *)viewController;
 @end
