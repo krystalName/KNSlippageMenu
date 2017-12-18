@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger , KNTransitionAnimation){
  @param SlippageConfig 滑动的基本配置
  @return 返回本身
  */
-+(instancetype)initWithMethodType:(KNTransitionMethodType)methodType AnimationType:(KNTransitionAnimation)animationType SlippageConfig:(KNSlippageConfig *)SlippageConfig;
++(instancetype)transitionWithType:(KNTransitionMethodType)methodType AnimationType:(KNTransitionAnimation)animationType SlippageConfig:(KNSlippageConfig *)SlippageConfig;
 
 @end
 
