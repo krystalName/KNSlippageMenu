@@ -71,17 +71,56 @@
     self.weakVC = viewController;
     
     //添加隐藏点击手势
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleHiddenPanGesture:)];
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleShowPanGestur:)];
     [viewController.view addGestureRecognizer:panGesture];
 }
+
+-(void)handleShowPanGestur:(UIPanGestureRecognizer *)panGesture{
+    if (_MethodType == KNTransitionMethodTypeHideed) {
+        return;
+    }
+    [self handleGesture:panGesture];
+}
+
 
 //统一处理隐藏
 -(void)handleHiddenPanGesture:(NSNotification *)note{
     if (_MethodType == KNTransitionMethodTypeShow) return;
-    
     UIPanGestureRecognizer *panGesture = note.object;
+    [self handleGesture:panGesture];
+}
+
+//隐藏
+-(void)hiddenBegnTranslationX:(CGFloat )x{
+    
+    
+    if ((x >0 && _direction == KNSlippageDirectionLeft) || (x < 0 && _direction == KNSlippageDirectionRight)) return;
+    
+    //开启vc里面的互动
+    self.interacting = YES;
+    [self.weakVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+//显示
+-(void)showBeganTranslationX:(CGFloat)x gesture:(UIPanGestureRecognizer *)PanGesture{
+    
+    //显示状态就不做任何处理
+    if ((x < 0 && _direction == KNSlippageDirectionLeft) || (x > 0 && _direction == KNSlippageDirectionRight)) return;
+    
+    CGFloat locX = [PanGesture locationInView:_weakVC.view].x;
+    
+    //判断显示状态不做处理
+    if (_openEdgeGesture && ((locX > 50 && _direction == KNSlippageDirectionLeft) || (locX < CGRectGetWidth(_weakVC.view.frame) - 50 && _direction == KNSlippageDirectionRight))) {
+        return;
+    }
+    //否则就能点击交互
+    self.interacting = YES;
+    if (_transitionBlock) {
+        _transitionBlock();
+    }
     
 }
+
 
 
 -(void)handleGesture:(UIPanGestureRecognizer *)panGesture
@@ -126,36 +165,6 @@
 }
 
 
-//隐藏
--(void)hiddenBegnTranslationX:(CGFloat )x{
-    
-    
-    if ((x >0 && _direction == KNSlippageDirectionLeft) || (x < 0 && _direction == KNSlippageDirectionRight)) return;
-    
-    //开启vc里面的互动
-    self.interacting = YES;
-    [self.weakVC dismissViewControllerAnimated:YES completion:nil];
-}
-
-//显示
--(void)showBeganTranslationX:(CGFloat)x gesture:(UIPanGestureRecognizer *)PanGesture{
-    
-    //显示状态就不做任何处理
-    if ((x < 0 && _direction == KNSlippageDirectionLeft) || (x > 0 && _direction == KNSlippageDirectionRight)) return;
-    
-    CGFloat locX = [PanGesture locationInView:_weakVC.view].x;
-    
-    //判断显示状态不做处理
-    if (_openEdgeGesture && ((locX > 50 && _direction == KNSlippageDirectionLeft) || (locX < CGRectGetWidth(_weakVC.view.frame) - 50 && _direction == KNSlippageDirectionRight))) {
-        return;
-    }
-    //否则就能点击交互
-    self.interacting = YES;
-    if (_transitionBlock) {
-        _transitionBlock();
-    }
-    
-}
 
 -(void)startDisplayerLink:(CGFloat)percent toFinish:(BOOL)finish{
     _toFinish = finish;
@@ -177,15 +186,6 @@
     self.link = nil;
 }
 
-#pragma mark - 懒加载
--(CADisplayLink *)link{
-    if (!_link) {
-        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
-        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    return _link;
-}
-
 
 - (void)update {
     
@@ -205,6 +205,17 @@
         [self updateInteractiveTransition:_percent];
     }
 }
+
+
+#pragma mark - 懒加载
+-(CADisplayLink *)link{
+    if (!_link) {
+        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return _link;
+}
+
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];

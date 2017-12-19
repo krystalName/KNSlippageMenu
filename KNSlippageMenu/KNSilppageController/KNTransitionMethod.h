@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger , KNTransitionAnimation){
 
 
 
-@interface KNTransitionMethod : NSObject
+@interface KNTransitionMethod : NSObject<UIViewControllerAnimatedTransitioning>
 
 
 /**

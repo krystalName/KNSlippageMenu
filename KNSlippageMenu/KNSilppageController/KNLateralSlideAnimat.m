@@ -39,6 +39,28 @@
     [self.interactiveHidden setValue:slippageConfig forKey:@"slippageConfig"];
 }
 
+#pragma mark - UIViewControllerTransitioningDelegate
+-(nullable id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [KNTransitionMethod transitionWithType:KNTransitionMethodTypeShow AnimationType:_Animatio SlippageConfig:_slippageConfig];
+}
+
+-(nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [KNTransitionMethod transitionWithType:KNTransitionMethodTypeHideed AnimationType:_Animatio SlippageConfig:_slippageConfig];
+}
+
+//Presenttation
+-(id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
+{
+    return self.interactiveShow.interacting ? self.interactiveShow : nil;
+}
+//dismiss
+-(id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
+{
+    return self.interactiveHidden.interacting ? self.interactiveHidden : nil;
+}
+
 
 
 @end
