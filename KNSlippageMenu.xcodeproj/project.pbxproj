@@ -16,6 +16,7 @@
 		C2CD232C1FE37D4D006D29A3 /* KNSlippageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */; };
 		C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */; };
 		C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */; };
+		C2F31E761FE8ECF30065E4C6 /* KNLateralSlideAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNTransitionMethod.m; sourceTree = "<group>"; };
 		C2F31E711FE7B7250065E4C6 /* KNInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNInteractiveTransition.h; sourceTree = "<group>"; };
 		C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNInteractiveTransition.m; sourceTree = "<group>"; };
+		C2F31E741FE8ECF30065E4C6 /* KNLateralSlideAnimat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNLateralSlideAnimat.h; sourceTree = "<group>"; };
+		C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNLateralSlideAnimat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */,
 				C2F31E711FE7B7250065E4C6 /* KNInteractiveTransition.h */,
 				C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */,
+				C2F31E741FE8ECF30065E4C6 /* KNLateralSlideAnimat.h */,
+				C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */,
 			);
 			path = KNSilppageController;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			files = (
 				C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */,
 				C2CD23181FE2783E006D29A3 /* ViewController.m in Sources */,
+				C2F31E761FE8ECF30065E4C6 /* KNLateralSlideAnimat.m in Sources */,
 				C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */,
 				C2CD232C1FE37D4D006D29A3 /* KNSlippageConfig.m in Sources */,
 				C2CD23231FE2783E006D29A3 /* main.m in Sources */,
