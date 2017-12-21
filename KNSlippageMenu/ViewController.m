@@ -29,6 +29,10 @@
     
     self.tableView.frame = self.view.bounds;
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     
     //注册手势驱动
     __weak typeof (self)weakSelf = self;

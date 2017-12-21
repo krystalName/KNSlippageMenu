@@ -17,9 +17,9 @@
 {
     if (viewController == nil) return;
     
-    if (Slippageconfig == nil ) {
+    if (Slippageconfig == nil )
         Slippageconfig = [KNSlippageConfig defaultConfiguration];
-    }
+    
     
     KNLateralSlideAnimat *animator = objc_getAssociatedObject(self, &KNLateralSlideAnimatorKey);
     
@@ -63,9 +63,9 @@
     [InteractiveShow setValue:@(openEdgeGesture) forKey:@"openEdgeGesture"];
     [InteractiveShow setValue:transitionBlock forKey:@"transitionBlock"];
     [InteractiveShow setValue:@(direction) forKey:@"direction"];
-    
     //设置动画
     [animat setValue:InteractiveShow forKey:@"interactiveShow"];
+    
 }
 
 

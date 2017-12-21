@@ -42,6 +42,8 @@
 }
 
 
+
+
 ///初始化方法。 设置类型。添加两个通知
 -(instancetype)initWithTransitionMethodType:(KNTransitionMethodType)MethodType
 {
@@ -62,6 +64,16 @@
 ///dismissView
 -(void)singleTap{
     [self.weakVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - 懒加载
+-(CADisplayLink *)link{
+    if (!_link) {
+        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return _link;
 }
 
 
@@ -91,10 +103,10 @@
 }
 
 //隐藏
--(void)hiddenBegnTranslationX:(CGFloat )x{
+-(void)hiddenBeganTranslationX:(CGFloat )x{
     
     
-    if ((x >0 && _direction == KNSlippageDirectionLeft) || (x < 0 && _direction == KNSlippageDirectionRight)) return;
+    if ((x > 0 && _direction == KNSlippageDirectionLeft ) || (x < 0 && _direction == KNSlippageDirectionRight)) return;
     
     //开启vc里面的互动
     self.interacting = YES;
@@ -126,6 +138,9 @@
 -(void)handleGesture:(UIPanGestureRecognizer *)panGesture
 {
     CGFloat x = [panGesture locationInView:panGesture.view].x;
+
+    _percent = 0;
+    
     _percent = x / panGesture.view.frame.size.width;
     
     if ( (_direction == KNSlippageDirectionRight && _MethodType == KNTransitionMethodTypeShow) ||
@@ -141,7 +156,7 @@
                 [self showBeganTranslationX:x gesture:panGesture];
             }else
             {
-                [self hiddenBegnTranslationX:x];
+                [self hiddenBeganTranslationX:x];
             }
             break;
         }
@@ -214,14 +229,6 @@
 }
 
 
-#pragma mark - 懒加载
--(CADisplayLink *)link{
-    if (!_link) {
-        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
-        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    return _link;
-}
 
 
 -(void)dealloc{

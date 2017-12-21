@@ -7,6 +7,7 @@
 //
 
 #import "LeftViewController.h"
+#import "UIViewController+KNLateralSlippage.h"
 
 
 @interface LeftViewController ()
