@@ -18,6 +18,7 @@
 		C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */; };
 		C2F31E761FE8ECF30065E4C6 /* KNLateralSlideAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */; };
 		C2F31E791FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E781FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m */; };
+		C2F31E7C1FEA55080065E4C6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNLateralSlideAnimat.m; sourceTree = "<group>"; };
 		C2F31E771FE906F90065E4C6 /* UIViewController+KNLateralSlippage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNLateralSlippage.h"; sourceTree = "<group>"; };
 		C2F31E781FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNLateralSlippage.m"; sourceTree = "<group>"; };
+		C2F31E7A1FEA55080065E4C6 /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				C2CD231E1FE2783E006D29A3 /* LaunchScreen.storyboard */,
 				C2CD23211FE2783E006D29A3 /* Info.plist */,
 				C2CD23221FE2783E006D29A3 /* main.m */,
+				C2F31E7A1FEA55080065E4C6 /* LeftViewController.h */,
+				C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */,
 			);
 			path = KNSlippageMenu;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F31E7C1FEA55080065E4C6 /* LeftViewController.m in Sources */,
 				C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */,
 				C2CD23181FE2783E006D29A3 /* ViewController.m in Sources */,
 				C2F31E791FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */,

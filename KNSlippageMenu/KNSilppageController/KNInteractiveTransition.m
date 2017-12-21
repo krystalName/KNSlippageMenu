@@ -128,14 +128,15 @@
     CGFloat x = [panGesture locationInView:panGesture.view].x;
     _percent = x / panGesture.view.frame.size.width;
     
-    if ( (_direction == KNSlippageDirectionLeft && _MethodType == KNTransitionMethodTypeShow) ||
-       (_direction == KNSlippageDirectionRight && _MethodType == KNTransitionMethodTypeHideed) ) {
+    if ( (_direction == KNSlippageDirectionRight && _MethodType == KNTransitionMethodTypeShow) ||
+       (_direction == KNSlippageDirectionLeft && _MethodType == KNTransitionMethodTypeHideed) ) {
         _percent = -_percent;
     }
     
     switch (panGesture.state) {
             //点击开始
         case UIGestureRecognizerStateBegan:
+        {
             if (_MethodType == KNTransitionMethodTypeShow) {
                 [self showBeganTranslationX:x gesture:panGesture];
             }else
@@ -143,14 +144,18 @@
                 [self hiddenBegnTranslationX:x];
             }
             break;
+        }
          //开始改变
-           case UIGestureRecognizerStateChanged:
+        case UIGestureRecognizerStateChanged:
+        {
             _percent = fminf(fmaxf(_percent, 0.001),1.0);
             [self updateInteractiveTransition:_percent];
             break;
+        }
             //结束
             case UIGestureRecognizerStateCancelled:
             case UIGestureRecognizerStateEnded:
+        {
             self.interacting = NO;
             if (_percent > 0.5) {
                 [self startDisplayerLink:_percent toFinish:YES];
@@ -158,6 +163,8 @@
                 [self startDisplayerLink:_percent toFinish:NO];
             }
             break;
+        }
+            
         default:
             break;
     }
@@ -169,7 +176,7 @@
 -(void)startDisplayerLink:(CGFloat)percent toFinish:(BOOL)finish{
     _toFinish = finish;
     //保持时间
-    CGFloat remainDuration = finish ? self.duration *(1 - percent) :self.duration *percent;
+    CGFloat remainDuration = finish ? self.duration * (1 - percent) : self.duration * percent;
     _remaincount = 60 * remainDuration;
     _oncePercent = finish ? (1 - percent) / _remaincount : percent / _remaincount;
     

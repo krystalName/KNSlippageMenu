@@ -13,21 +13,23 @@
 
 @property (nonatomic, weak)KNSlippageConfig *SlippageConfig;
 
-@property (nonatomic) KNTransitionMethodType MethodType;
-
-@property (nonatomic) KNTransitionAnimation AnimationType;
 
 @end
 
 @implementation KNTransitionMethod
+{
+    KNTransitionMethodType _MethodType;
+    KNTransitionAnimation _AnimationType;
+}
 
 
 -(instancetype)initWithMethodType:(KNTransitionMethodType)methodType AnimationType:(KNTransitionAnimation)animationType SlippageConfig:(KNSlippageConfig *)SlippageConfig
 {
     if (self = [super init]) {
-        _SlippageConfig = SlippageConfig;
         _MethodType = methodType;
         _AnimationType = animationType;
+        _SlippageConfig = SlippageConfig;
+
     }
     return self;
 }
@@ -115,9 +117,6 @@
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         
     }];
-    
-    
-    
 }
 
 //默认跳转的动画
@@ -144,7 +143,7 @@
     [containerView addSubview:imageView];
     
     CGFloat width = self.SlippageConfig.distance;
-    CGFloat x = -width / 2;
+    CGFloat x = - width / 2;
     CGFloat ret = 1;
     if (self.SlippageConfig.direction == KNSlippageDirectionRight) {
         x = KSCREEN_WIDTH - width /2;
@@ -160,13 +159,13 @@
     CGAffineTransform toVCTransform;
     
     if (self.SlippageConfig.direction == KNSlippageDirectionRight){
-       toVCTransform = CGAffineTransformMakeTranslation(ret * (x - CGRectGetWidth(containerView.frame) + width), 0);
+        toVCTransform = CGAffineTransformMakeTranslation(ret * (x - CGRectGetWidth(containerView.frame) + width), 0);
     }else{
-        toVCTransform = CGAffineTransformMakeTranslation(ret * width / 2 , 0);
+        toVCTransform = CGAffineTransformMakeTranslation(ret * width / 2, 0);
     }
     
     //用动画去处理
-    [UIView animateKeyframesWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
+    [UIView animateKeyframesWithDuration:[self transitionDuration:transitionContext] delay:0 options:0 animations:^{
        
         [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:1.0 animations:^{
             fromVC.view.transform = fromVCTransform;
@@ -246,10 +245,11 @@
 
 static MaskView * kn_shareInstance = nil;
 
-+(instancetype)shareInstance{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        kn_shareInstance = [MaskView new];
+static dispatch_once_t kn_onceToken;
+
++ (instancetype)shareInstance {
+    dispatch_once(&kn_onceToken, ^{
+        kn_shareInstance = [[MaskView alloc] init];
     });
     return kn_shareInstance;
 }
@@ -287,6 +287,7 @@ static MaskView * kn_shareInstance = nil;
 +(void)releaseInstance
 {
     [kn_shareInstance removeFromSuperview];
+    kn_onceToken = 0;
     kn_shareInstance = nil;
 }
 
@@ -295,7 +296,6 @@ static MaskView * kn_shareInstance = nil;
 
 NSString *const KNLateralSlideMaskViewKey = @"KNLateralSlideMaskViewKey";
 NSString *const KNLateralSlideAnimatorKey = @"KNLateralSlideAnimatorKey";
-NSString *const KNLateralSlideInterativeKey = @"KNLateralSlideInterativeKey";
 
 NSString *const KNLateralSlidePanNotication = @"KNLateralSlidePanNotication";
 NSString *const KNLateralSlideTapNotication = @"KNLateralSlideTapNotication";

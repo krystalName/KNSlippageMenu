@@ -16,7 +16,7 @@
 //默认初始化
 +(instancetype)defaultConfiguration
 {
-    return [KNSlippageConfig configurationWithDistance:KSCREEN_WIDTH * 0.75 backGroundAlpha:0.3 scaleY:1.0 direction:KNSlippageDirectionLeft backImage:nil];
+    return [KNSlippageConfig configurationWithDistance:KSCREEN_WIDTH * 0.75 backGroundAlpha:0.4 scaleY:1.0 direction:KNSlippageDirectionLeft backImage:nil];
 }
 
 
@@ -49,7 +49,7 @@
 
 -(float)backGroundAlpha{
     if (_backGroundAlpha == 0) {
-        return 0.3;
+        return 0.4;
     }
     return _backGroundAlpha;
 }
