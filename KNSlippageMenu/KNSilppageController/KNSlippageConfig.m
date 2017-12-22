@@ -26,7 +26,7 @@
     if (self = [super init]) {
         
         _distance  = distance;
-        _backGroundAlpha = alpha;
+        _maskAlpha = alpha;
         _direction = direction;
         _backImage = backImage;
         _scaleY = scaleY;
@@ -47,11 +47,11 @@
     return _distance;
 }
 
--(float)backGroundAlpha{
-    if (_backGroundAlpha == 0) {
+-(float)maskAlpha{
+    if (_maskAlpha == 0) {
         return 0.4;
     }
-    return _backGroundAlpha;
+    return _maskAlpha;
 }
 
 -(float)scaleY{

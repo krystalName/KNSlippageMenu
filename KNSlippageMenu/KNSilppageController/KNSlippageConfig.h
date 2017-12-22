@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, KNSlippageDirection){
 @property(nonatomic, assign)float distance;
 
 ///背景的透明度 默认0.3
-@property(nonatomic, assign)float backGroundAlpha;
+@property(nonatomic, assign)float maskAlpha;
 
 ///根据控制器在y方向的缩放。 默认设为不缩放
 @property(nonatomic, assign)float scaleY;

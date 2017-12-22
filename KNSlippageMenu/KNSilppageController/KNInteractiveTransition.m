@@ -101,9 +101,7 @@
 -(void)hiddenBeganTranslationX:(CGFloat )x{
     
     
-    if ((x > 0 && _direction == KNSlippageDirectionLeft ) || (x < 0 && _direction == KNSlippageDirectionRight)) return;
-    
-    //开启vc里面的互动
+    if ((x > 0 && _direction == KNSlippageDirectionLeft ) || (x < 0 && _direction == KNSlippageDirectionRight )) return;
     self.interacting = YES;
     [self.weakVC dismissViewControllerAnimated:YES completion:nil];
 }
@@ -115,12 +113,12 @@
     if ((x < 0 && _direction == KNSlippageDirectionLeft) || (x > 0 && _direction == KNSlippageDirectionRight)) return;
     
     CGFloat locX = [PanGesture locationInView:_weakVC.view].x;
+
     
-    //判断显示状态不做处理
     if (_openEdgeGesture && ((locX > 50 && _direction == KNSlippageDirectionLeft) || (locX < CGRectGetWidth(_weakVC.view.frame) - 50 && _direction == KNSlippageDirectionRight))) {
         return;
     }
-    //否则就能点击交互
+    
     self.interacting = YES;
     if (_transitionBlock) {
         _transitionBlock();
@@ -132,10 +130,9 @@
 
 -(void)handleGesture:(UIPanGestureRecognizer *)panGesture
 {
-    CGFloat x = [panGesture locationInView:panGesture.view].x;
-
-    _percent = 0;
+    CGFloat x = [panGesture translationInView:panGesture.view].x;
     
+    _percent = 0;
     _percent = x / panGesture.view.frame.size.width;
     
     if ((_direction == KNSlippageDirectionRight && _MethodType == KNTransitionMethodTypeShow) || (_direction == KNSlippageDirectionLeft && _MethodType == KNTransitionMethodTypeHideed)) {
@@ -143,37 +140,29 @@
     }
     
     switch (panGesture.state) {
-            //点击开始
-        case UIGestureRecognizerStateBegan:
-        {
+        case UIGestureRecognizerStateBegan: {
             if (_MethodType == KNTransitionMethodTypeShow) {
                 [self showBeganTranslationX:x gesture:panGesture];
-            }else
-            {
+            }else {
                 [self hiddenBeganTranslationX:x];
             }
             break;
         }
-         //开始改变
-        case UIGestureRecognizerStateChanged:
-        {
-            _percent = fminf(fmaxf(_percent, 0.001),1.0);
+        case UIGestureRecognizerStateChanged: {
+            _percent = fminf(fmaxf(_percent, 0.001), 1.0);
             [self updateInteractiveTransition:_percent];
             break;
         }
-            //结束
-            case UIGestureRecognizerStateCancelled:
-            case UIGestureRecognizerStateEnded:
-        {
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded:{
             self.interacting = NO;
             if (_percent > 0.5) {
                 [self startDisplayerLink:_percent toFinish:YES];
-            }else{
+            }else {
                 [self startDisplayerLink:_percent toFinish:NO];
             }
             break;
         }
-            
         default:
             break;
     }
@@ -182,25 +171,17 @@
 
 
 
--(void)startDisplayerLink:(CGFloat)percent toFinish:(BOOL)finish{
+- (void)startDisplayerLink:(CGFloat)percent toFinish:(BOOL)finish{
+    
     _toFinish = finish;
-    //保持时间
     CGFloat remainDuration = finish ? self.duration * (1 - percent) : self.duration * percent;
     _remaincount = 60 * remainDuration;
     _oncePercent = finish ? (1 - percent) / _remaincount : percent / _remaincount;
     
-    [self stopDisplayerLink];
+    [self starDisplayLink];
 }
 
 
-#pragma mark - 懒加载
--(CADisplayLink *)link{
-    if (!_link) {
-        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
-        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    return _link;
-}
 
 
 #pragma mark - displayerLink
@@ -212,6 +193,16 @@
     [self.link invalidate];
     self.link = nil;
 }
+
+#pragma mark - 懒加载
+-(CADisplayLink *)link{
+    if (!_link) {
+        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return _link;
+}
+
 
 
 - (void)update {

@@ -40,7 +40,7 @@
     [animator setValue:interactiveHidden forKey:@"interactiveHidden"];
     //设置配置Config
     [animator setSlippageConfig:Slippageconfig];
-    animator.Animatio = AnimationType;
+    animator.animatioType = AnimationType;
     
     [self presentViewController:viewController animated:YES completion:nil];
 }
@@ -49,43 +49,36 @@
 -(void)kn_registerShowIntractiveWithEdgeGesture:(BOOL)openEdgeGesture direction:(KNSlippageDirection)direction transitionBlock:(void (^)(void))transitionBlock
 {
     
-    //动画。
-    KNLateralSlideAnimat *animat = [KNLateralSlideAnimat lateralSideAnimatorWithSilppageConfig:nil];
-    //delegate
-    self.transitioningDelegate = animat;
+    KNLateralSlideAnimat *animator = [KNLateralSlideAnimat lateralSideAnimatorWithSilppageConfig:nil];
     
-    //设置动画
-    objc_setAssociatedObject(self, &KNLateralSlideAnimatorKey, animat, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.transitioningDelegate = animator;
     
-    //配置
-    KNInteractiveTransition *InteractiveShow = [KNInteractiveTransition interactiveWithTransitionMethodType:KNTransitionMethodTypeShow];
-    [InteractiveShow addPanGestureForViewController:self];
-    [InteractiveShow setValue:@(openEdgeGesture) forKey:@"openEdgeGesture"];
-    [InteractiveShow setValue:transitionBlock forKey:@"transitionBlock"];
-    [InteractiveShow setValue:@(direction) forKey:@"direction"];
-    //设置动画
-    [animat setValue:InteractiveShow forKey:@"interactiveShow"];
+    objc_setAssociatedObject(self, &KNLateralSlideAnimatorKey, animator, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    KNInteractiveTransition *interactiveShow = [KNInteractiveTransition interactiveWithTransitionMethodType:KNTransitionMethodTypeShow];
+    [interactiveShow addPanGestureForViewController:self];
+    [interactiveShow setValue:@(openEdgeGesture) forKey:@"openEdgeGesture"];
+    [interactiveShow setValue:transitionBlock forKey:@"transitionBlock"];
+    [interactiveShow setValue:@(direction) forKey:@"direction"];
+    
+    [animator setValue:interactiveShow forKey:@"interactiveShow"];
     
 }
 
 
 -(void)kn_pushViewController:(UIViewController *)viewController
 {
-    //获取rootViewController
+    
     UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
     UINavigationController *nav;
-    
-    //判断
     if ([rootVC isKindOfClass:[UITabBarController class]]) {
         UITabBarController *tabbar = (UITabBarController *)rootVC;
         NSInteger index = tabbar.selectedIndex;
         nav = tabbar.childViewControllers[index];
-    }
-    else if ([rootVC isKindOfClass:[UINavigationController class]]){
+    }else if ([rootVC isKindOfClass:[UINavigationController class]]) {
         nav = (UINavigationController *)rootVC;
-    }
-    else if ([rootVC isKindOfClass:[UIViewController class]]){
-        NSLog(@"Tihs NO UINavigationController");
+    }else if ([rootVC isKindOfClass:[UIViewController class]]) {
+        NSLog(@"This no UINavigationController...");
         return;
     }
     

@@ -13,7 +13,7 @@
 @interface KNLateralSlideAnimat : NSObject <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) KNSlippageConfig *slippageConfig;
-@property (nonatomic, assign) KNTransitionAnimation  Animatio;
+@property (nonatomic, assign) KNTransitionAnimation  animatioType;
 
 
 ///实例方法创建

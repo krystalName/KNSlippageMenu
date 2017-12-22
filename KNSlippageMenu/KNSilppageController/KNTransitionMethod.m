@@ -111,7 +111,7 @@
     CGAffineTransform fromVCTransform = CGAffineTransformConcat(t1, t2);
     CGAffineTransform toVCTransform;
     if (self.SlippageConfig.direction == KNSlippageDirectionRight) {
-        toVCTransform = CGAffineTransformMakeTranslation(ret * (x - CGRectGetWidth(containerView.frame) + width), 0);
+       toVCTransform = CGAffineTransformMakeTranslation(ret * (x - CGRectGetWidth(containerView.frame) + width), 0);
     }else {
         toVCTransform = CGAffineTransformMakeTranslation(ret * width / 2, 0);
     }
@@ -123,7 +123,7 @@
             fromVC.view.transform = fromVCTransform;
             toVC.view.transform = toVCTransform;
             imageV.transform = CGAffineTransformIdentity;
-            maskView.alpha = self.SlippageConfig.backGroundAlpha;
+            maskView.alpha = self.SlippageConfig.maskAlpha;
             
         }];
         
@@ -208,7 +208,7 @@
         
         [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:1.0 animations:^{
             toVC.view.transform = toVCTransiform;
-            maskView.alpha = self.SlippageConfig.backGroundAlpha;
+            maskView.alpha = self.SlippageConfig.maskAlpha;
         }];
         
     } completion:^(BOOL finished) {
@@ -227,6 +227,7 @@
     
     
 }
+
 
 
 @end

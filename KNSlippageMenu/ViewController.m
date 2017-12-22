@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "LeftViewController.h"
+#import "RightViewController.h"
+
+#import "KNScrollView.h"
 
 #import "UIViewController+KNLateralSlippage.h"
 
@@ -28,12 +31,10 @@
     [self.view addSubview:self.tableView];
     
     self.tableView.frame = self.view.bounds;
+
     
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
-    
-    
+    [self setupNavBarItem];
+
     //注册手势驱动
     __weak typeof (self)weakSelf = self;
     [self kn_registerShowIntractiveWithEdgeGesture:NO direction:KNSlippageDirectionLeft transitionBlock:^{
@@ -41,6 +42,13 @@
     }];
     
 }
+
+- (void)setupNavBarItem {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(leftClick)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(rightClick)];
+}
+
 
 - (NSMutableArray *)datadSource {
     if (_datadSource == nil) {
@@ -74,12 +82,23 @@
 }
 
 
+- (void)rightClick {
+    
+    RightViewController *vc = [[RightViewController alloc] init];
+    
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:1 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    
+    [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
+    
+    
+}
+
+
 #pragma mark - 设置cell
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.textLabel.text = self.datadSource[indexPath.row];
     
@@ -92,6 +111,8 @@
     
     if (indexPath.row == 0) {
         [self leftClick];
+    }else if (indexPath.row == 1){
+        [self rightClick];
     }
 }
 

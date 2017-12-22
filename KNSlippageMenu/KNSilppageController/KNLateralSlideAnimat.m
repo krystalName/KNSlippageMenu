@@ -42,12 +42,12 @@
 #pragma mark - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    return [KNTransitionMethod transitionWithType:KNTransitionMethodTypeShow AnimationType:_Animatio SlippageConfig:_slippageConfig];
+    return [KNTransitionMethod transitionWithType:KNTransitionMethodTypeShow AnimationType:_animatioType SlippageConfig:_slippageConfig];
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    return [KNTransitionMethod transitionWithType:KNTransitionMethodTypeHideed AnimationType:_Animatio SlippageConfig:_slippageConfig];
+    return [KNTransitionMethod transitionWithType:KNTransitionMethodTypeHideed AnimationType:_animatioType SlippageConfig:_slippageConfig];
 }
 
 //Presenttation

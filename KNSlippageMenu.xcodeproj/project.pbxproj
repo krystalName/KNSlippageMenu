@@ -13,12 +13,15 @@
 		C2CD231D1FE2783E006D29A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CD231C1FE2783E006D29A3 /* Assets.xcassets */; };
 		C2CD23201FE2783E006D29A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CD231E1FE2783E006D29A3 /* LaunchScreen.storyboard */; };
 		C2CD23231FE2783E006D29A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD23221FE2783E006D29A3 /* main.m */; };
-		C2CD232C1FE37D4D006D29A3 /* KNSlippageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */; };
-		C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */; };
-		C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */; };
-		C2F31E761FE8ECF30065E4C6 /* KNLateralSlideAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */; };
-		C2F31E791FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E781FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m */; };
 		C2F31E7C1FEA55080065E4C6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */; };
+		C2F31E7E1FECF06B0065E4C6 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F31E7D1FECF06B0065E4C6 /* 0.jpg */; };
+		C2F31E811FECF13C0065E4C6 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E801FECF13C0065E4C6 /* RightViewController.m */; };
+		C2F31EBD1FECF60F0065E4C6 /* KNSlippageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EB41FECF60F0065E4C6 /* KNSlippageConfig.m */; };
+		C2F31EBE1FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EB91FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m */; };
+		C2F31EBF1FECF60F0065E4C6 /* KNTransitionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EBA1FECF60F0065E4C6 /* KNTransitionMethod.m */; };
+		C2F31EC01FECF60F0065E4C6 /* KNLateralSlideAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EBB1FECF60F0065E4C6 /* KNLateralSlideAnimat.m */; };
+		C2F31EC11FECF60F0065E4C6 /* KNInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EBC1FECF60F0065E4C6 /* KNInteractiveTransition.m */; };
+		C2F31EC41FECF92E0065E4C6 /* KNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EC31FECF92E0065E4C6 /* KNScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,18 +35,23 @@
 		C2CD231F1FE2783E006D29A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2CD23211FE2783E006D29A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CD23221FE2783E006D29A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C2CD232A1FE37D4D006D29A3 /* KNSlippageConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNSlippageConfig.h; sourceTree = "<group>"; };
-		C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNSlippageConfig.m; sourceTree = "<group>"; };
-		C2CD232D1FE3B608006D29A3 /* KNTransitionMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNTransitionMethod.h; sourceTree = "<group>"; };
-		C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNTransitionMethod.m; sourceTree = "<group>"; };
-		C2F31E711FE7B7250065E4C6 /* KNInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNInteractiveTransition.h; sourceTree = "<group>"; };
-		C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNInteractiveTransition.m; sourceTree = "<group>"; };
-		C2F31E741FE8ECF30065E4C6 /* KNLateralSlideAnimat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNLateralSlideAnimat.h; sourceTree = "<group>"; };
-		C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNLateralSlideAnimat.m; sourceTree = "<group>"; };
-		C2F31E771FE906F90065E4C6 /* UIViewController+KNLateralSlippage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNLateralSlippage.h"; sourceTree = "<group>"; };
-		C2F31E781FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNLateralSlippage.m"; sourceTree = "<group>"; };
 		C2F31E7A1FEA55080065E4C6 /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		C2F31E7D1FECF06B0065E4C6 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 0.jpg; path = "../../../../Downloads/CWLateralSlide-master/ViewControllerTransition/Clasess/0.jpg"; sourceTree = "<group>"; };
+		C2F31E7F1FECF13C0065E4C6 /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		C2F31E801FECF13C0065E4C6 /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		C2F31EB31FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNLateralSlippage.h"; sourceTree = "<group>"; };
+		C2F31EB41FECF60F0065E4C6 /* KNSlippageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNSlippageConfig.m; sourceTree = "<group>"; };
+		C2F31EB51FECF60F0065E4C6 /* KNTransitionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTransitionMethod.h; sourceTree = "<group>"; };
+		C2F31EB61FECF60F0065E4C6 /* KNLateralSlideAnimat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNLateralSlideAnimat.h; sourceTree = "<group>"; };
+		C2F31EB71FECF60F0065E4C6 /* KNInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNInteractiveTransition.h; sourceTree = "<group>"; };
+		C2F31EB81FECF60F0065E4C6 /* KNSlippageConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNSlippageConfig.h; sourceTree = "<group>"; };
+		C2F31EB91FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNLateralSlippage.m"; sourceTree = "<group>"; };
+		C2F31EBA1FECF60F0065E4C6 /* KNTransitionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTransitionMethod.m; sourceTree = "<group>"; };
+		C2F31EBB1FECF60F0065E4C6 /* KNLateralSlideAnimat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNLateralSlideAnimat.m; sourceTree = "<group>"; };
+		C2F31EBC1FECF60F0065E4C6 /* KNInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNInteractiveTransition.m; sourceTree = "<group>"; };
+		C2F31EC21FECF92E0065E4C6 /* KNScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNScrollView.h; sourceTree = "<group>"; };
+		C2F31EC31FECF92E0065E4C6 /* KNScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,35 +84,40 @@
 		C2CD23121FE2783D006D29A3 /* KNSlippageMenu */ = {
 			isa = PBXGroup;
 			children = (
-				C2CD23291FE278D3006D29A3 /* KNSilppageController */,
+				C2F31EB21FECF60F0065E4C6 /* KNSilppageController */,
 				C2CD23131FE2783D006D29A3 /* AppDelegate.h */,
 				C2CD23141FE2783D006D29A3 /* AppDelegate.m */,
 				C2CD23161FE2783E006D29A3 /* ViewController.h */,
 				C2CD23171FE2783E006D29A3 /* ViewController.m */,
-				C2CD23191FE2783E006D29A3 /* Main.storyboard */,
-				C2CD231C1FE2783E006D29A3 /* Assets.xcassets */,
-				C2CD231E1FE2783E006D29A3 /* LaunchScreen.storyboard */,
-				C2CD23211FE2783E006D29A3 /* Info.plist */,
-				C2CD23221FE2783E006D29A3 /* main.m */,
 				C2F31E7A1FEA55080065E4C6 /* LeftViewController.h */,
 				C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */,
+				C2F31E7F1FECF13C0065E4C6 /* RightViewController.h */,
+				C2F31E801FECF13C0065E4C6 /* RightViewController.m */,
+				C2F31E7D1FECF06B0065E4C6 /* 0.jpg */,
+				C2CD23191FE2783E006D29A3 /* Main.storyboard */,
+				C2CD231C1FE2783E006D29A3 /* Assets.xcassets */,
+				C2CD23211FE2783E006D29A3 /* Info.plist */,
+				C2CD231E1FE2783E006D29A3 /* LaunchScreen.storyboard */,
+				C2CD23221FE2783E006D29A3 /* main.m */,
 			);
 			path = KNSlippageMenu;
 			sourceTree = "<group>";
 		};
-		C2CD23291FE278D3006D29A3 /* KNSilppageController */ = {
+		C2F31EB21FECF60F0065E4C6 /* KNSilppageController */ = {
 			isa = PBXGroup;
 			children = (
-				C2CD232A1FE37D4D006D29A3 /* KNSlippageConfig.h */,
-				C2CD232B1FE37D4D006D29A3 /* KNSlippageConfig.m */,
-				C2CD232D1FE3B608006D29A3 /* KNTransitionMethod.h */,
-				C2CD232E1FE3B608006D29A3 /* KNTransitionMethod.m */,
-				C2F31E711FE7B7250065E4C6 /* KNInteractiveTransition.h */,
-				C2F31E721FE7B7250065E4C6 /* KNInteractiveTransition.m */,
-				C2F31E741FE8ECF30065E4C6 /* KNLateralSlideAnimat.h */,
-				C2F31E751FE8ECF30065E4C6 /* KNLateralSlideAnimat.m */,
-				C2F31E771FE906F90065E4C6 /* UIViewController+KNLateralSlippage.h */,
-				C2F31E781FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m */,
+				C2F31EB81FECF60F0065E4C6 /* KNSlippageConfig.h */,
+				C2F31EB41FECF60F0065E4C6 /* KNSlippageConfig.m */,
+				C2F31EB51FECF60F0065E4C6 /* KNTransitionMethod.h */,
+				C2F31EBA1FECF60F0065E4C6 /* KNTransitionMethod.m */,
+				C2F31EB71FECF60F0065E4C6 /* KNInteractiveTransition.h */,
+				C2F31EBC1FECF60F0065E4C6 /* KNInteractiveTransition.m */,
+				C2F31EB61FECF60F0065E4C6 /* KNLateralSlideAnimat.h */,
+				C2F31EBB1FECF60F0065E4C6 /* KNLateralSlideAnimat.m */,
+				C2F31EB31FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.h */,
+				C2F31EB91FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m */,
+				C2F31EC21FECF92E0065E4C6 /* KNScrollView.h */,
+				C2F31EC31FECF92E0065E4C6 /* KNScrollView.m */,
 			);
 			path = KNSilppageController;
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F31E7E1FECF06B0065E4C6 /* 0.jpg in Resources */,
 				C2CD23201FE2783E006D29A3 /* LaunchScreen.storyboard in Resources */,
 				C2CD231D1FE2783E006D29A3 /* Assets.xcassets in Resources */,
 				C2CD231B1FE2783E006D29A3 /* Main.storyboard in Resources */,
@@ -181,14 +195,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F31E7C1FEA55080065E4C6 /* LeftViewController.m in Sources */,
-				C2CD232F1FE3B608006D29A3 /* KNTransitionMethod.m in Sources */,
+				C2F31EC41FECF92E0065E4C6 /* KNScrollView.m in Sources */,
+				C2F31EC11FECF60F0065E4C6 /* KNInteractiveTransition.m in Sources */,
+				C2F31EC01FECF60F0065E4C6 /* KNLateralSlideAnimat.m in Sources */,
 				C2CD23181FE2783E006D29A3 /* ViewController.m in Sources */,
-				C2F31E791FE906F90065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */,
-				C2F31E761FE8ECF30065E4C6 /* KNLateralSlideAnimat.m in Sources */,
-				C2F31E731FE7B7250065E4C6 /* KNInteractiveTransition.m in Sources */,
-				C2CD232C1FE37D4D006D29A3 /* KNSlippageConfig.m in Sources */,
+				C2F31EBD1FECF60F0065E4C6 /* KNSlippageConfig.m in Sources */,
+				C2F31E811FECF13C0065E4C6 /* RightViewController.m in Sources */,
+				C2F31EBF1FECF60F0065E4C6 /* KNTransitionMethod.m in Sources */,
 				C2CD23231FE2783E006D29A3 /* main.m in Sources */,
 				C2CD23151FE2783D006D29A3 /* AppDelegate.m in Sources */,
+				C2F31EBE1FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
