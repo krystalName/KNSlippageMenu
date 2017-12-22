@@ -20,4 +20,5 @@
 +(instancetype)interactiveWithTransitionMethodType:(KNTransitionMethodType)MethodType;
 
 - (void)addPanGestureForViewController:(UIViewController *)viewController;
+
 @end

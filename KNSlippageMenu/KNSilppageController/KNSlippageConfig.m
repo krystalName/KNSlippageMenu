@@ -16,12 +16,12 @@
 //默认初始化
 +(instancetype)defaultConfiguration
 {
-    return [KNSlippageConfig configurationWithDistance:KSCREEN_WIDTH * 0.75 backGroundAlpha:0.4 scaleY:1.0 direction:KNSlippageDirectionLeft backImage:nil];
+    return [KNSlippageConfig configurationWithDistance:KSCREEN_WIDTH maskAlpha:0.4 scaleY:1 direction:KNSlippageDirectionLeft backImage:nil];
 }
 
 
 //实例初始化
--(instancetype)initWithDistance:(float)distance backGroundAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage
+-(instancetype)initWithDistance:(float)distance maskAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage
 {
     if (self = [super init]) {
         
@@ -35,9 +35,9 @@
 }
 
 //类初始化
-+(instancetype)configurationWithDistance:(float)distance backGroundAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage
++(instancetype)configurationWithDistance:(float)distance maskAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage
 {
-    return  [[self alloc] initWithDistance:distance backGroundAlpha:alpha scaleY:scaleY direction:distance backImage:backImage];
+   return  [[self alloc]initWithDistance:distance maskAlpha:alpha scaleY:scaleY direction:direction backImage:backImage];
 }
 
 -(float)distance{

@@ -55,25 +55,11 @@
     
     return self;
 }
+
 ///类方法
 +(instancetype)interactiveWithTransitionMethodType:(KNTransitionMethodType)MethodType
 {
     return [[self alloc] initWithTransitionMethodType:MethodType];
-}
-
-///dismissView
--(void)singleTap{
-    [self.weakVC dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-#pragma mark - 懒加载
--(CADisplayLink *)link{
-    if (!_link) {
-        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
-        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    return _link;
 }
 
 
@@ -87,6 +73,13 @@
     [viewController.view addGestureRecognizer:panGesture];
 }
 
+
+///dismissView
+-(void)singleTap{
+    [self.weakVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 -(void)handleShowPanGestur:(UIPanGestureRecognizer *)panGesture{
     if (_MethodType == KNTransitionMethodTypeHideed) {
         return;
@@ -98,7 +91,9 @@
 //统一处理隐藏
 -(void)handleHiddenPanGesture:(NSNotification *)note{
     if (_MethodType == KNTransitionMethodTypeShow) return;
+    
     UIPanGestureRecognizer *panGesture = note.object;
+    
     [self handleGesture:panGesture];
 }
 
@@ -143,8 +138,7 @@
     
     _percent = x / panGesture.view.frame.size.width;
     
-    if ( (_direction == KNSlippageDirectionRight && _MethodType == KNTransitionMethodTypeShow) ||
-       (_direction == KNSlippageDirectionLeft && _MethodType == KNTransitionMethodTypeHideed) ) {
+    if ((_direction == KNSlippageDirectionRight && _MethodType == KNTransitionMethodTypeShow) || (_direction == KNSlippageDirectionLeft && _MethodType == KNTransitionMethodTypeHideed)) {
         _percent = -_percent;
     }
     
@@ -197,6 +191,17 @@
     
     [self stopDisplayerLink];
 }
+
+
+#pragma mark - 懒加载
+-(CADisplayLink *)link{
+    if (!_link) {
+        _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+        [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return _link;
+}
+
 
 #pragma mark - displayerLink
 - (void)starDisplayLink {

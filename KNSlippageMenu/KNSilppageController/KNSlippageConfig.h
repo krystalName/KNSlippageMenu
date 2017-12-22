@@ -10,8 +10,7 @@
 #import <UIKit/UIKit.h>
 
 
-#define KSCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define KSCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define KSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 
 typedef NS_ENUM(NSInteger, KNSlippageDirection){
@@ -55,7 +54,7 @@ typedef NS_ENUM(NSInteger, KNSlippageDirection){
  @param backImage 动画过程中。最底层的背景图片
  @return 配置对象本身
  */
-- (instancetype)initWithDistance:(float)distance backGroundAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection )direction backImage:(UIImage *)backImage;
+- (instancetype)initWithDistance:(float)distance maskAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage;
 
 
 /**
@@ -68,6 +67,6 @@ typedef NS_ENUM(NSInteger, KNSlippageDirection){
  @param backImage 动画切换过程中，最底层的背景图片
  @return 配置对象本身
  */
-+ (instancetype)configurationWithDistance:(float)distance backGroundAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage;
++ (instancetype)configurationWithDistance:(float)distance maskAlpha:(float)alpha scaleY:(float)scaleY direction:(KNSlippageDirection)direction backImage:(UIImage *)backImage;
 
 @end

@@ -90,7 +90,9 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self leftClick];
+    if (indexPath.row == 0) {
+        [self leftClick];
+    }
 }
 
 -(UITableView *)tableView{
