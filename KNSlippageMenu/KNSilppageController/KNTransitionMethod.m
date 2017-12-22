@@ -49,7 +49,6 @@
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     switch (_MethodType) {
-            
         case KNTransitionMethodTypeShow:
             [self animationViewShow:transitionContext];
             break;
@@ -72,7 +71,6 @@
     }else if (_AnimationType == KNTransitionAnimationMask)
     {
         [self maskAnimationWithContext:transitionContext];
-    }else {
         
     }
 }

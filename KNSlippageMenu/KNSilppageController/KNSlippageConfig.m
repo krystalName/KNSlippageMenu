@@ -16,7 +16,7 @@
 //默认初始化
 +(instancetype)defaultConfiguration
 {
-    return [KNSlippageConfig configurationWithDistance:KSCREEN_WIDTH maskAlpha:0.4 scaleY:1 direction:KNSlippageDirectionLeft backImage:nil];
+    return [KNSlippageConfig configurationWithDistance:KSCREEN_WIDTH * 0.75 maskAlpha:0.4 scaleY:1 direction:KNSlippageDirectionLeft backImage:nil];
 }
 
 
@@ -42,7 +42,7 @@
 
 -(float)distance{
     if (_direction == 0) {
-        return KSCREEN_WIDTH *0.75;
+        return KSCREEN_WIDTH * 0.75;
     }
     return _distance;
 }
