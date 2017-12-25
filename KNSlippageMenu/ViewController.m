@@ -10,9 +10,11 @@
 #import "LeftViewController.h"
 #import "RightViewController.h"
 
-#import "KNScrollView.h"
 
 #import "UIViewController+KNLateralSlippage.h"
+
+#define KSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
