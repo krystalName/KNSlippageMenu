@@ -73,6 +73,23 @@
 }
 
 
+-(void)leftClickSuoxiao{
+    
+    LeftViewController *vc =[[LeftViewController alloc]init];
+    
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    
+    [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
+}
+
+-(void)leftClickMask{
+    
+    LeftViewController *vc = [[LeftViewController alloc]init];
+    
+    [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationMask configuration:nil];
+}
+
+
 -(void)leftClick{
     
     LeftViewController *vc = [[LeftViewController alloc]init];
@@ -86,10 +103,9 @@
     
     RightViewController *vc = [[RightViewController alloc] init];
     
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:1 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:nil];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
-    
     
 }
 
@@ -113,6 +129,10 @@
         [self leftClick];
     }else if (indexPath.row == 1){
         [self rightClick];
+    }else if (indexPath.row == 2){
+        [self leftClickMask];
+    }else if (indexPath.row == 3){
+        [self leftClickSuoxiao];
     }
 }
 

@@ -121,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KNSlippageMenu/KNSilppageController/KNTransitionMethod.m"
-            timestampString = "535626195.620976"
+            filePath = "KNSlippageMenu/KNSilppageController/KNSlippageConfig.m"
+            timestampString = "535626195.621247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-animationViewShow:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-distance"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KNSlippageMenu/KNSilppageController/KNTransitionMethod.m"
-            timestampString = "535626195.621053"
+            timestampString = "535866826.305067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-animationViewShow:"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-defaultAnimationWithContext:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KNSlippageMenu/KNSilppageController/KNTransitionMethod.m"
-            timestampString = "535626195.621106"
+            timestampString = "535866826.305182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-animateTransition:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-defaultAnimationWithContext:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,23 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KNSlippageMenu/KNSilppageController/KNTransitionMethod.m"
-            timestampString = "535626195.621153"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-animateTransition:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KNSlippageMenu/KNSilppageController/KNTransitionMethod.m"
-            timestampString = "535626195.6212"
+            timestampString = "535866826.305275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -201,13 +185,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KNSlippageMenu/KNSilppageController/KNSlippageConfig.m"
-            timestampString = "535626195.621247"
+            filePath = "KNSlippageMenu/KNSilppageController/UIViewController+KNLateralSlippage.m"
+            timestampString = "535866913.340462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-distance"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-kn_ShowDrawerViewController:animationType:configuration:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KNSlippageMenu/KNSilppageController/UIViewController+KNLateralSlippage.m"
+            timestampString = "535866915.410267"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-kn_ShowDrawerViewController:animationType:configuration:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
