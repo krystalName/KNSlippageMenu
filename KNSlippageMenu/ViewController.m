@@ -52,7 +52,7 @@
 
 - (NSMutableArray *)datadSource {
     if (_datadSource == nil) {
-        _datadSource = [NSMutableArray arrayWithArray:@[@"仿QQ左侧划出",@"仿QQ右侧划出",@"左侧划出并缩小",@"右侧划出并缩小",@"遮盖在上面从左侧划出",@"遮盖在上面从右侧划出"]];
+        _datadSource = [NSMutableArray arrayWithArray:@[@"仿QQ左侧划出",@"仿QQ右侧划出",@"遮盖在上面从左侧划出",@"遮盖在上面从右侧划出",@"左侧划出并缩小",@"右侧划出并缩小"]];
     }
     return _datadSource;
 }
@@ -77,7 +77,7 @@
     
     LeftViewController *vc =[[LeftViewController alloc]init];
     
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionLeft backImage:[UIImage imageNamed:@"0.jpg"]];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
 }
@@ -101,12 +101,30 @@
 
 - (void)rightClick {
     
-    RightViewController *vc = [[RightViewController alloc] init];
-    
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:nil];
+    RightViewController *vc = [[RightViewController alloc]init];
+
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
     
+}
+
+-(void)rightClickMask{
+    RightViewController *vc = [[RightViewController alloc]init];
+    
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    
+    [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationMask configuration:conf];
+}
+
+
+-(void)rightClickSuoxiao{
+    
+    RightViewController *vc =[[RightViewController alloc]init];
+    
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    
+    [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
 }
 
 
@@ -132,7 +150,11 @@
     }else if (indexPath.row == 2){
         [self leftClickMask];
     }else if (indexPath.row == 3){
+        [self rightClickMask];
+    }else if (indexPath.row == 4){
         [self leftClickSuoxiao];
+    }else{
+        [self rightClickSuoxiao];
     }
 }
 

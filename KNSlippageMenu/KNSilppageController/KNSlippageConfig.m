@@ -40,9 +40,10 @@
    return  [[self alloc]initWithDistance:distance maskAlpha:alpha scaleY:scaleY direction:direction backImage:backImage];
 }
 
--(float)distance{
-    if (_direction == 0) {
-        return KSCREEN_WIDTH * 0.75;
+-(float)distance
+{
+    if (_distance == 0) {
+        _distance = KSCREEN_WIDTH * 0.75;
     }
     return _distance;
 }
