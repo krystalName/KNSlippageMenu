@@ -20,7 +20,6 @@
 		C2F31EBF1FECF60F0065E4C6 /* KNTransitionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EBA1FECF60F0065E4C6 /* KNTransitionMethod.m */; };
 		C2F31EC01FECF60F0065E4C6 /* KNLateralSlideAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EBB1FECF60F0065E4C6 /* KNLateralSlideAnimat.m */; };
 		C2F31EC11FECF60F0065E4C6 /* KNInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EBC1FECF60F0065E4C6 /* KNInteractiveTransition.m */; };
-		C2F31EC41FECF92E0065E4C6 /* KNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EC31FECF92E0065E4C6 /* KNScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +47,6 @@
 		C2F31EBA1FECF60F0065E4C6 /* KNTransitionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTransitionMethod.m; sourceTree = "<group>"; };
 		C2F31EBB1FECF60F0065E4C6 /* KNLateralSlideAnimat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNLateralSlideAnimat.m; sourceTree = "<group>"; };
 		C2F31EBC1FECF60F0065E4C6 /* KNInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNInteractiveTransition.m; sourceTree = "<group>"; };
-		C2F31EC21FECF92E0065E4C6 /* KNScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNScrollView.h; sourceTree = "<group>"; };
-		C2F31EC31FECF92E0065E4C6 /* KNScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +110,6 @@
 				C2F31EBB1FECF60F0065E4C6 /* KNLateralSlideAnimat.m */,
 				C2F31EB31FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.h */,
 				C2F31EB91FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m */,
-				C2F31EC21FECF92E0065E4C6 /* KNScrollView.h */,
-				C2F31EC31FECF92E0065E4C6 /* KNScrollView.m */,
 			);
 			path = KNSilppageController;
 			sourceTree = "<group>";
@@ -191,7 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F31E7C1FEA55080065E4C6 /* LeftViewController.m in Sources */,
-				C2F31EC41FECF92E0065E4C6 /* KNScrollView.m in Sources */,
 				C2F31EC11FECF60F0065E4C6 /* KNInteractiveTransition.m in Sources */,
 				C2F31EC01FECF60F0065E4C6 /* KNLateralSlideAnimat.m in Sources */,
 				C2CD23181FE2783E006D29A3 /* ViewController.m in Sources */,
