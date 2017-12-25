@@ -76,8 +76,9 @@
 -(void)leftClickSuoxiao{
     
     LeftViewController *vc =[[LeftViewController alloc]init];
+    vc.view.backgroundColor = [UIColor clearColor];
     
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionLeft backImage:[UIImage imageNamed:@"0.jpg"]];
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionLeft backImage:[UIImage imageNamed:@"0"]];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
 }
@@ -103,7 +104,7 @@
     
     RightViewController *vc = [[RightViewController alloc]init];
 
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:nil];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
     
@@ -112,7 +113,7 @@
 -(void)rightClickMask{
     RightViewController *vc = [[RightViewController alloc]init];
     
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0 direction:KNSlippageDirectionRight backImage:nil];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationMask configuration:conf];
 }
@@ -121,8 +122,9 @@
 -(void)rightClickSuoxiao{
     
     RightViewController *vc =[[RightViewController alloc]init];
+    vc.view.backgroundColor = [UIColor clearColor];
     
-    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0.jpg"]];
+    KNSlippageConfig *conf = [KNSlippageConfig configurationWithDistance:0 maskAlpha:0.4 scaleY:0.8 direction:KNSlippageDirectionRight backImage:[UIImage imageNamed:@"0"]];
     
     [self kn_ShowDrawerViewController:vc animationType:KNTransitionAnimationDefault configuration:conf];
 }

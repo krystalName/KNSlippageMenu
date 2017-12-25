@@ -14,7 +14,6 @@
 		C2CD23201FE2783E006D29A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CD231E1FE2783E006D29A3 /* LaunchScreen.storyboard */; };
 		C2CD23231FE2783E006D29A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CD23221FE2783E006D29A3 /* main.m */; };
 		C2F31E7C1FEA55080065E4C6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */; };
-		C2F31E7E1FECF06B0065E4C6 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F31E7D1FECF06B0065E4C6 /* 0.jpg */; };
 		C2F31E811FECF13C0065E4C6 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31E801FECF13C0065E4C6 /* RightViewController.m */; };
 		C2F31EBD1FECF60F0065E4C6 /* KNSlippageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EB41FECF60F0065E4C6 /* KNSlippageConfig.m */; };
 		C2F31EBE1FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EB91FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.m */; };
@@ -37,7 +36,6 @@
 		C2CD23221FE2783E006D29A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2F31E7A1FEA55080065E4C6 /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		C2F31E7D1FECF06B0065E4C6 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 0.jpg; path = "../../../../Downloads/CWLateralSlide-master/ViewControllerTransition/Clasess/0.jpg"; sourceTree = "<group>"; };
 		C2F31E7F1FECF13C0065E4C6 /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		C2F31E801FECF13C0065E4C6 /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		C2F31EB31FECF60F0065E4C6 /* UIViewController+KNLateralSlippage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNLateralSlippage.h"; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				C2F31E7B1FEA55080065E4C6 /* LeftViewController.m */,
 				C2F31E7F1FECF13C0065E4C6 /* RightViewController.h */,
 				C2F31E801FECF13C0065E4C6 /* RightViewController.m */,
-				C2F31E7D1FECF06B0065E4C6 /* 0.jpg */,
 				C2CD23191FE2783E006D29A3 /* Main.storyboard */,
 				C2CD231C1FE2783E006D29A3 /* Assets.xcassets */,
 				C2CD23211FE2783E006D29A3 /* Info.plist */,
@@ -180,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2F31E7E1FECF06B0065E4C6 /* 0.jpg in Resources */,
 				C2CD23201FE2783E006D29A3 /* LaunchScreen.storyboard in Resources */,
 				C2CD231D1FE2783E006D29A3 /* Assets.xcassets in Resources */,
 				C2CD231B1FE2783E006D29A3 /* Main.storyboard in Resources */,
