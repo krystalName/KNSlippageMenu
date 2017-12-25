@@ -46,7 +46,7 @@
 }
 
 
--(void)kn_registerShowIntractiveWithEdgeGesture:(BOOL)openEdgeGesture direction:(KNSlippageDirection)direction transitionBlock:(void (^)(void))transitionBlock
+-(void)kn_RegisterShowIntractiveWithEdgeGesture:(BOOL)openEdgeGesture direction:(KNSlippageDirection)direction transitionBlock:(void (^)(void))transitionBlock
 {
     
     KNLateralSlideAnimat *animator = [KNLateralSlideAnimat lateralSideAnimatorWithSilppageConfig:nil];

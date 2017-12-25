@@ -34,7 +34,7 @@
  @param direction 呼出测滑的方向。默认left
  @param transitionBlock 手势过程中执行的操作。传正点presenr的事件就可以了
  */
--(void)kn_registerShowIntractiveWithEdgeGesture:(BOOL)openEdgeGesture
+-(void)kn_RegisterShowIntractiveWithEdgeGesture:(BOOL)openEdgeGesture
                                       direction:(KNSlippageDirection)direction
                                 transitionBlock:(void(^)(void))transitionBlock;
 

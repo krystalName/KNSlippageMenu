@@ -37,7 +37,7 @@
 
     //注册手势驱动
     __weak typeof (self)weakSelf = self;
-    [self kn_registerShowIntractiveWithEdgeGesture:NO direction:KNSlippageDirectionLeft transitionBlock:^{
+    [self kn_RegisterShowIntractiveWithEdgeGesture:NO direction:KNSlippageDirectionLeft transitionBlock:^{
         [weakSelf leftClick];
     }];
     
