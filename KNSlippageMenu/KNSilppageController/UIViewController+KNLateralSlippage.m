@@ -55,12 +55,13 @@
     
     objc_setAssociatedObject(self, &KNLateralSlideAnimatorKey, animator, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
+
     KNInteractiveTransition *interactiveShow = [KNInteractiveTransition interactiveWithTransitionMethodType:KNTransitionMethodTypeShow];
     [interactiveShow addPanGestureForViewController:self];
     [interactiveShow setValue:@(openEdgeGesture) forKey:@"openEdgeGesture"];
     [interactiveShow setValue:transitionBlock forKey:@"transitionBlock"];
     [interactiveShow setValue:@(direction) forKey:@"direction"];
-    
+   
     [animator setValue:interactiveShow forKey:@"interactiveShow"];
     
 }
